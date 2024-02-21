@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하루 일과</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrap {
+        max-width: 760px;
+        width: 100%;
+        height: 100vh;
+        background-color: #261717;
+      }
+      header {
+        height: 50px;
+        border-bottom: 2px solid #e9e2e0;
+        position: relative;
+      }
+      .con_wrap {
+        width: 44px;
+        height: 24px;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+        color: #e9e2e0;
+      }
+      section {
+        height: 40px;
+      }
+      .container {
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+        /* background-color: white; */
+        margin: 22px;
+        border-radius: 6px;
+        display: flex;
+      }
+      .secImg {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .secImg svg {
+        width: 25px;
+        height: 25px;
+      }
+      .container .secCon {
+        width: 270px;
+        height: 40px;
+        border-radius: 6px;
+        background-color: #e9e2e0;
+        display: flex;
+        margin-left: 20px;
+      }
+      .secImg:nth-child(1) {
+        background-color: #e9e2e0;
+      }
+      .secImg:nth-child(3) {
+        color: #e9e2e0;
+        position: relative;
+        left: 4px;
+      }
+      .secCon input {
+        width: 100%;
+        height: 100%;
+        background-color: #e9e2e0;
+        border: none;
+        border-radius: 6px;
+        text-align: center;
+      }
+      .sub_sec {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(27, 20, 20, 0.85);
+        /* background-color: #190f0f; */
+        position: absolute;
+        top: 0;
+        display: none;
+      }
+      .sub_container {
+        width: 100%;
+        height: 300px;
+        margin: 70px auto;
+        display: flex;
+        justify-content: center;
+      }
+      .sub_con {
+        width: 257px;
+        height: 100%;
+        background-color: #4e3030;
+        text-align: center;
+        color: white;
+        border-radius: 30px;
+      }
+      .sub_con h1 {
+        position: relative;
+        top: 10px;
+      }
+      .sub_con_in {
+        width: 216px;
+        height: 171px;
+        border-radius: 20px;
+        background-color: white;
+        margin: 20px auto;
+      }
+      .sub_con_in input {
+        width: 100%;
+        height: 171px;
+        border-radius: 20px;
+        text-align: center;
+      }
+      .click_box {
+        width: 160px;
+        height: 30px;
+        /* background-color: lightslategray; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .click_box button {
+        width: 45%;
+        height: 100%;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="con_wrap">
+          <i class="fa-solid fa-plus"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </header>
+      <section>
+        <form id="myForm">
+          <div class="container">
+            <div class="secImg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+              >
+                <g
+                  id="사각형_11"
+                  data-name="사각형 11"
+                  fill="#fff"
+                  stroke="#261717"
+                  stroke-width="1"
+                >
+                  <path
+                    d="M0,0H12.5A12.5,12.5,0,0,1,25,12.5v0A12.5,12.5,0,0,1,12.5,25h0A12.5,12.5,0,0,1,0,12.5V0A0,0,0,0,1,0,0Z"
+                    stroke="none"
+                  />
+                  <path
+                    d="M.944.5H12.5a12,12,0,0,1,12,12v0a12,12,0,0,1-12,12h0a12,12,0,0,1-12-12V.944A.444.444,0,0,1,.944.5Z"
+                    fill="none"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="secCon">
+              <input type="text" placeholder="하루 목표를 입력해주세용~😘" />
+            </div>
+            <div class="secImg">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <div class="sub_sec">
+        <div class="sub_container">
+          <div class="sub_con">
+            <h1>하루목표</h1>
+            <form>
+              <div class="sub_con_in">
+                <input
+                  type="text"
+                  placeholder="오늘 하루 목표를 넣어주세요.😘"
+                />
+
+                <div class="click_box">
+                  <button>O</button>
+                  <button>X</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const svgEl = document.querySelector(".con_wrap .fa-plus");
+        const sub_secEl = document.querySelector(".sub_sec");
+        const cancelBtn = document.querySelector(
+          ".click_box button:nth-child(2)"
+        );
+
+        const inputEl = document.querySelector(".sub_con_in input");
+        const maininputEl = document.querySelector(".secCon input");
+
+        const formEl = document.querySelector(".sub_con form");
+
+        // ==============================================================
+        const svgclickHeadler = () => {
+          sub_secEl.style.display = "block";
+        };
+
+        const subClickHandler = () => {
+          sub_secEl.style.display = "none";
+        };
+        const formHandler = (e) => {
+          e.preventDefault();
+          // const textTrue = (maininputEl.value = inputEl.value);
+          // sub_secEl.style.display = "none";
+          // const a = textTrue.contains;
+          // console.log(a);
+          const textTrue = maininputEl.value.includes(inputEl.value);
+
+          if (textTrue === false) {
+            sub_secEl.style.display = "none";
+            maininputEl.value = inputEl.value;
+            console.log(textTrue);
+          }
+        };
+        svgEl.contains;
+        svgEl.addEventListener("click", svgclickHeadler);
+        cancelBtn.addEventListener("click", subClickHandler);
+        formEl.addEventListener("submit", formHandler);
+      </script>
+    </div>
+  </body>
+</html>
